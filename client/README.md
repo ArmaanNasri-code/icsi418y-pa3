@@ -1,16 +1,44 @@
-# React + Vite
+# ICSI 418Y - Programming Assignment 3
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## About
 
-Currently, two official plugins are available:
+This project is an updated version of PA2. It allows users to create projects and manage project members.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Sign up and log in
+- Create and view projects
+- Choose a project lead
+- Add and remove project members
+- Prevent duplicate members
+- Prevent removing the project lead
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tools Used
 
-## Expanding the Oxlint configuration
+- React
+- Node.js and Express
+- MongoDB Atlas
+- Mongoose
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## How to Run
+
+1. Open the project in VS Code.
+2. Open a terminal and go to the `server` folder.
+3. Run `npm install`.
+4. Add a `.env` file with your `MONGO_URI` connection string.
+5. Run `node server.js`.
+6. Open another terminal and go to the `client` folder.
+7. Run `npm install`, then `npm run dev`.
+8. Open `http://localhost:5173` in your browser.
+
+## Database
+
+The application uses three collections:
+
+- **users** - Stores user accounts.
+- **projects** - Stores project information.
+- **projectmemberships** - Connects users to projects using MongoDB ObjectIds.
+
+## Author
+
+Armaan Nasri
